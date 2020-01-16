@@ -1,4 +1,4 @@
-# Ansible Role: Tomcat 8 [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8.svg?branch=master)](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat8)
+# Ansible Role: Tomcat 8 [![Build Status](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat.svg?branch=master)](https://travis-ci.org/Islandora-Devops/ansible-role-tomcat)
 
 An Ansible role that installs Tomcat 8 on:
 
@@ -11,52 +11,52 @@ Available variables are listed below, along with default values:
 
 Tomcat packages to install
 ```
-tomcat8_packages:
-  - tomcat8
+tomcat_packages:
+  - tomcat
 ```
 
 Tomcat admin packages to install
 ```
-tomcat8_admin_packages:
-  - tomcat8-admin
+tomcat_admin_packages:
+  - tomcat-admin
 ```
 
 Directory to install Tomcat into
 ```
-tomcat8_home: /var/lib/tomcat8
+tomcat_home: /var/lib/tomcat
 ```
 
 Whether to install the Tomcat administrative interface
 ```
-tomcat8_admin_install: yes
+tomcat_admin_install: yes
 ```
 
 Tomcat roles
 ```
-tomcat8_roles: []
+tomcat_roles: []
 ```
 
 Tomcat users
 ```
-tomcat8_users: []
+tomcat_users: []
 ```
 
 User and group to run Tomcat as
 ```
-tomcat8_server_user: tomcat8
-tomcat8_server_group: tomcat8
+tomcat_server_user: tomcat
+tomcat_server_group: tomcat
 ```
 
 Some OS-specific variables are set in vars/* but can be overridden
 ```
-tomcat8_home: /opt/tomcat
+tomcat_home: /opt/tomcat
 ```
 
 Including these only used by CentOS/RH
 ```
-tomcat8_version: 8.5.27
-tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat8_version }}/bin/apache-tomcat-{{ tomcat8_version }}.tar.gz"
-tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"
+tomcat_version: 8.5.27
+tomcat_binary_url:  "http://www-eu.apache.org/dist/tomcat/tomcat-8/v{{ tomcat_version }}/bin/apache-tomcat-{{ tomcat_version }}.tar.gz"
+tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat_version }}"
 ```
 
 ## Dependencies
@@ -67,7 +67,7 @@ tomcat_target_dir:  "/opt/apache-tomcat-{{ tomcat8_version }}"
 
     - hosts: webservers
       roles:
-        - { role: islandora.tomcat8 }
+        - { role: islandora.tomcat }
 
 ## License
 
