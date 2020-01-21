@@ -1,14 +1,26 @@
----
-services: docker
-
+language: python
+python:
+  - 3.7
 env:
-# - distro: centos7
-  - distro: ubuntu1604
-
+  global:
+    - MOLECULE_DEBUG: "true"
+    - ROLE_NAME: tomcat8
+    - EC2_REGION: us-east-1
+    - secure: ey3BRS+EUtLc+WuoC1PL7GLU5Zty4yBp9iijCNuqRtcak4cuBGZ9VR7kn6hrwmBq2Xagrx0vfdevv9ubWiXuYjDJRzuRU2NcjB6g9Y2h8LlInaISzqyoryLymq3aY8Jf3++5b8jtdPfEwK3W3hak+1fydtvaCcaX44D+1QccPJov/fDncyMMQg+QpQm6r0viyqcwh8GDXRdZYt6ba9NfMjZpYW1wcUJwhpXbKZGP9qWutXLVuD4uOfiWc2LaBzIs0cyu0bqJWukyVnw/9Zb8YzAlM1tj23hVuvGI6Sz6v8BfxZ19TDhM75CsjLZ6tW9ydUoEswir1vVoUjSuSusDU02FZZpxH1DbpBW5riMixJ3AzqJInow/dL2B7PTLpA23Pag2pLyjG9O8CEQPV7x8RIbW61qDqOHJIW+DNWoOBOW2d0wSsje26ANMISe/7SqTj3aAzrlSCqOZGPCKXa1USapimNhoXoZ5FzYhPNEEWPxerAqvzCeOFbKRwQKutcwsfY6peVQdNQitrXzyGMkf+YTkixwiBopp1eGDVZu7Y+NH+Oy7HBfv3ybEpZAD5SUdNHlzCx7RSxsAhXJNEG9yVw0Fxme+f8cloYEjvRPi8eMR1+Sc9o+kxwYFU0S0q5rDnt904/rBNfzWpfncOUldmQ7OBVoSB9Gvh1Hp7uvO/+w=
+    - secure: yD3dZOV85yfNhgV7P9fPIiF+uA2tHJ75UOXiUYUyVEiML+kTSLQqogG9V0ekMGgFWo/Kc8YGaLSm0D2SHUBOQvj0M3fDvN+yNMCsusqkuweWK6xGTAWIihJ6WcqwOgoIbcK37vxBcU6FS7grp4t43xzr0ojYVZvjTRA7HG+iEcX7W1jK3Hnzei1D4NU863E8B6gclgav2Ibpy0nTAWLuryJecuH+V5lqRALuB9/yIayfjUdD+yeiPnhxjjvqCHUD8F4L74rGgbCTPoCuNQady5zohSllWkxRDtM8KwRgLWRTZeUqe/8xx9MbYIf1oQxNlbwDTlMEoIiBWPfopNfMYbfgzdGy4Txcnh2w6zU8Q30fE3/agYq5qjifdN8b6FhTryqeTr6H3iriZrxcT4O4wBfOepQylg9a11d/N/vISQ26nb/ziaSBVKIS11tP5A3HCfce2RO/7DG6vRtI6X8tt2N4My4wEmpoendys+xjJFgELPkrsX5+5enhVzuFyFYiWAuTF2cb5Szb693afyD0k5x6vK0F4H8prTfeL1JckHMosIrlVlJX5VpC0EwxcLOsdTOMWr05ji1bmvbVu50/G9R9NTk3zympverC5ClK3Cz7SA/Imwbn19o8v1Wql3YU05nvFeWMfqDKB+JCb2yz4LtC1am9XWtTdif6OVRWSJM=
+    - secure: GDy/4eYhlYe2C7RptI7IzOjJd0cCoquMm1SXnD4DZjx44NXnhQfpCvgqVPL1gaAXNeFzQdK+G509PXt60d13q34EMMcov/M/ueFHzPtRViKF8hzdltqrqLFDLRv4MBqd3CV5mteZnNHqylS2nlCNiTqEnHJYXIeW1j0vEBV4AdpPNWpPEoIiF31PMhzXyPFvtNAR2Eh9OtMHwPU2I6X5JJqtnoVjWSybQLgXvhfYGYVp2dPlV1D4Y4LGf7JQa4m4Lbpuvev4u+leWZAzZsxvPmf//nZTYzEqUyU8xOj/ZD4kTvFfcXI7DtpCYEpQTI/M6QKPUtr2I69W9uLBp7/MQwUZhLLwnaDfBoJyEX/NmgOEva1SkA6GLRFYUqotQPIK2+Z46uHfdPe/Qvvo0rzIBLVa6SLkM90X0xKeIUvGCTYV7Pl3Dch8IWdVI1ecW3d3gS+8FKkRDIMUzc4gXf8+dyD+eYr4ErrXY4CMOMZ99/tq6Yhojb9NiaYYE9MTrvlA1hD4Z/5EpH+2p7YPnpVJB0VwaWHjVYtX6YIyAopfQlG5+XGyjtQri6R2oVUBdf0CDO6fyhYcadom3Ae9yN+IzPngp3A/kkr3/FxKLwPoSbt2BRoJ0aZ3tZTfvUAanUUi5E20npo/qMMX3E7mHmK/UPOGv2MFJheIBrOBmsB6wJw=
+    - secure: loLXMbECBcoYbvNSb4APutGNxjfErR++KUhGZhChZb/HsZBAaYsYWu0rtXjPCYb/m3ylH9FRrF5HsYpdCr4W2M+kxxWip22Iq4cAasIi1roVfXMuF0Aql2RZcWgxhVYrOfi/s+qI2nCX94MvGpvstXWJB0a1GhpQK7BrOZI6eNUzDJP8H+08qBG0q36XYhwZkOECXPBqzrw7Cz3Ss05Jjv3eq+AtsxFeQ/6NOJUbFXeFZV7QnMO8zTxEw4XDNyoRY/B5MGzPgJ0WLQ0b/6QAk1Bc6smO1q1xR58QegzhmgjhRwq5jN7oBVl4VOhjuDza1fs97s1w9SfRy5SxhzD4izk9GcsdxNnEoNET4IiWcpELkjLSf9jLBmbSmpJTzpvExFfxfZhGrSZLyPY2z3oCa64RjfYSsCUJV47TDmSmN1J7vaTyrCldl50jloFGIpaeeCf1zzM3J8BuFOrw3cpTwbY2o3UsI3V5UpemBgg7as4wlFf3zBSKlYHVv2jbrPxGBkhv0gsd+5HpGL8pFJwUZNiMK+1X0YptXz5ouDSUi02b8bKSTrDGTNYecf1uX44FcL2e2EoKgbveyqBLND3msXUZMGC4JUwYVUb+A1HDAGn4teW0CSJTvH0ayS2A0qAA8DzOEoj3bTt1+uR9DknMETIztV1ha3DUXRbMTycNKrc=
+install:
+  - pip install pipenv
+  - pipenv install
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY
+  - aws configure set aws_secret_access_key $AWS_SECRET_KEY
+  - aws configure set default.region $EC2_REGION
+  - aws configure list
 script:
-  # Download test shim.
-  - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
-  - chmod +x ${PWD}/tests/test.sh
-
-  # Run tests.
-  - ${PWD}/tests/test.sh
+  - molecule create --scenario-name aws
+  - molecule converge --scenario-name aws
+  - molecule verify --scenario-name aws
+  - molecule destroy --scenario-name aws
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
