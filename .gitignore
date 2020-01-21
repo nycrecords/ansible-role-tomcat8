@@ -1,2 +1,7 @@
-tests/test.sh
 *.retry
+
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace

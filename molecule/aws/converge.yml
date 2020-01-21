@@ -1,0 +1,25 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    # Role: yum_config_manager
+    repositories:
+      enabled:
+        - rhui-REGION-rhel-server-rhscl
+        - rhui-REGION-rhel-server-debug-rhscl
+
+    # Role: java
+    java_home: /usr/lib/jvm/java-1.8.0-openjdk.x86_64
+
+    # Role: Tomcat8
+    tomcat_java_home: /usr/lib/jvm/java-1.8.0-openjdk.x86_64
+    tomcat_heap_min: "128m"
+    tomcat_heap_max: "128m"
+    tomcat_max_perm_size: "128m"
+    
+  roles:
+    - role: nycrecords.yum_config_manager
+    - role: nycrecords.java
+    - role: ansible-role-tomcat8
