@@ -8,7 +8,7 @@ env:
   - EC2_REGION: us-east-1
   - secure: QR4Lx+IwXWoQJ7wmitDLv1Wcv2ZgysaMVXNk4QKSb6jdP41V1+jwxJ4b3/X5m6TQe9m2xVnU0QhHFOw2hLi1NVZQ92O8C0m0g0u0gKdVBqHXnFAE696aPacSxyh2PMSowsVr4+tQ8PkQB2y48tJgab/voij3i1IKI2Cfv7aF3BbTOwFVX8YNMJHV0LagRJS/tgZ9X7m2qBw5fCAylHLbUHHUCh5RXImpAxK0asMsKlU7UahR1+Qj03xB70Jg9v4ZAHQmpVV5TJm/vvHi+Xo8KIT0UaLbKruNnL0fYZeU+30a++5OP+M/gzqi04QwIxv6vf9QXSYp6SwVMuSmEFK7JDdEFXwpOzx1LvLg3q0uZyzFjZnlfdVv1ADwhkh3O6+2VXw+XG1mZStzoZNpjP3xAG7iA9miaBt/61ozk02g5n2rHJBTOLn0KDX0rGk83ACm6UJcyvylR1igEG4205WbFuBT5FqPz8gRXsQRDjHqavA4eIoL4JdziuDBhptUo4Y9A86qOTNm6iLjj+BG6UGBbQbZXm5SW0oZftX46vnJjmWI6dkT3TsqOQxTEtd1glkCRswCYYvUkao+30ALSn4y5xF8vIwX1K5DNOJD7ByCr5UtgTxPVK68BpJ2JM4Ls1nKvPn1aCvviVNlcPQxXABJrv4k1YtMoitsW9upLojt4hU=
 install:
-- echo $RHSM_USERNAME
+- env
 script:
 - molecule create --scenario-name aws
 - molecule converge --scenario-name aws
