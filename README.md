@@ -3,8 +3,8 @@ Ansible Role: Tomcat 8
 ![GitHub](https://img.shields.io/github/license/nycrecords/ansible-role-tomcat8)
 [![Build Status](https://travis-ci.com/nycrecords/ansible-role-tomcat8.svg?branch=master)](https://travis-ci.com/nycrecords/ansible-role-tomcat8)
 [![Galaxy](https://img.shields.io/badge/galaxy-nycrecords.tomcat8-blue.svg)](https://galaxy.ansible.com/nycrecords/tomcat8)
-![Ansible](https://img.shields.io/ansible/role/d/45553)
-![Ansible](https://img.shields.io/ansible/quality/45553)
+![Ansible](https://img.shields.io/ansible/role/d/90483)
+![Ansible](https://img.shields.io/ansible/quality/90483)
 
 An Ansible role that installs Tomcat 8 on:
 

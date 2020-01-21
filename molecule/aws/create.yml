@@ -53,7 +53,7 @@
         name: "{{ keypair_name }}"
       register: keypair
 
-    - name: Persist the keypair
+    - name: Persist the keypair #noqa 503
       copy:
         dest: "{{ keypair_path }}"
         content: "{{ keypair.key.private_key }}"

@@ -5,7 +5,7 @@
     - tomcat
     - tomcat-config
     - tomcat-install
-  
+
 - include: "install-{{ ansible_os_family }}.yml"
   tags:
     - tomcat
