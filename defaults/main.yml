@@ -26,7 +26,7 @@ tomcat_java_opts:
   - -Xmx128m
   - -XX:+UseConcMarkSweepGC
 
-
+# Set the JavaOPts for heap size in the tomcat service. 
 tomcat_heap_min: "128m"
 tomcat_heap_max: "128m"
 tomcat_max_perm_size: "512m"
